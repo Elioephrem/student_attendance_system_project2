@@ -12,7 +12,7 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-  String? selectedValue; // Change type to String?
+  String? selectedValue; 
 
   @override
   Widget build(BuildContext context) {
@@ -40,14 +40,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
               onChanged: (value) {
                 setState(() {
                   selectedValue = value;
-                  widget.semester = value ?? ''; // Use an empty string if null
+                  widget.semester = value ?? ''; 
                 });
               },
               items: [null, 'Fall 2023-2024', 'Spring 2023-2024']
                   .map((String? method) {
                 return DropdownMenuItem<String>(
                   value: method,
-                  child: Text(method ?? 'Select Semester'), // Provide a default label for null
+                  child: Text(method ?? 'Select Semester'), 
                 );
               }).toList(),
             ),
