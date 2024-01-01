@@ -60,7 +60,7 @@ class _AttendanceMarkingScreenState extends State<AttendanceMarkingScreen> {
       fontSize: 16.0,
     );
 
-    // You can add any further logic or UI updates after submitting attendance
+    
   }
 
   Future<void> markAttendance(String studentId) async {
@@ -70,7 +70,7 @@ class _AttendanceMarkingScreenState extends State<AttendanceMarkingScreen> {
       body: {
         "course_id": widget.course,
         "student_id": studentId,
-        "is_present": "1", // Assuming 1 means present, modify as needed
+        "is_present": "1", 
       },
     );
 
@@ -128,8 +128,8 @@ class _AttendanceMarkingScreenState extends State<AttendanceMarkingScreen> {
             ),
              ElevatedButton(
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.all(20), // Adjust padding as needed
-                elevation: 50, // Add elevation
+                padding: EdgeInsets.all(20), 
+                elevation: 50, 
               ),
               onPressed: () {
                 submitAttendance();
