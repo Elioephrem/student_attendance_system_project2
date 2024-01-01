@@ -24,7 +24,7 @@ class _ClassListScreenState extends State<ClassListScreen> {
   }
 
   Future<void> fetchData() async {
-    try {
+   
       var url = Uri.http("elioephremralph.000webhostapp.com", 'courses.php');
       var response = await http.post(
         url,
@@ -41,11 +41,7 @@ class _ClassListScreenState extends State<ClassListScreen> {
       } else {
         throw Exception('Failed to load data. Status code: ${response.statusCode}');
       }
-    } catch (e) {
-      print('Error: $e');
-      // Handle the error as needed (show a dialog, log the error, etc.)
-      // You might want to show an error message to the user.
-    }
+   
   }
 
   @override
@@ -69,7 +65,7 @@ class _ClassListScreenState extends State<ClassListScreen> {
               child: ListTile(
 
                 title: Text(classes[index]['course_id'] ?? '',textAlign: TextAlign.center,),
-                // Add other class information as needed
+               
                 onTap: () {
                   Navigator.push(
                     context,
